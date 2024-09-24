@@ -459,7 +459,7 @@ const focusLastTabbableIn = (element, focusOptions) =>
  * document only lost focus. It uses the current target of the focus out as the
  * element to target outside focus on.
  */
-const createdNormalizedFocusOutHandler = (() => {
+const createNormalizedFocusOutHandler = (() => {
   /**
    * @typedef {(
    *   focusOut: FocusEvent,
@@ -1306,7 +1306,7 @@ class Popover extends UIComponent {
       }
     })
 
-    const normalizedContentFocusOutHandler = createdNormalizedFocusOutHandler({
+    const normalizedContentFocusOutHandler = createNormalizedFocusOutHandler({
       currentTarget: elements.content,
       handler: () => {
         this._handleContentNormalizedFocusOutNonTriggerClick()
@@ -1580,7 +1580,7 @@ class DropdownMenu extends UIComponent {
       }
     })
 
-    const normalizedContentFocusOutHandler = createdNormalizedFocusOutHandler({
+    const normalizedContentFocusOutHandler = createNormalizedFocusOutHandler({
       currentTarget: elements.content,
       handler: (ev) => {
         this._handleContentNormalizedFocusOutNonTriggerClick(ev)
