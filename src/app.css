@@ -498,6 +498,10 @@ img {
     0 0 0 3px var(--color-state-focused);
 }
 
+.c-tag[data-state="open"] {
+  background-color: var(--color-grey-50);
+}
+
 /*
 * 
 * 
