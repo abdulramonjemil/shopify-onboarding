@@ -1256,6 +1256,7 @@ img {
 
 .accordion-item-top-section {
   display: flex;
+  flex-direction: row-reverse;
   gap: var(--spacing-2);
 
   height: max-content;
